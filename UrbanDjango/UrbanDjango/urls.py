@@ -19,10 +19,17 @@ from django.urls import path
 
 from task2.views import index1
 from task2.views import index2
+
+from task3.views import platform
+from task3.views import games
+from task3.views import cart
 from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index1),
+    path('main/', platform),
+    path('games/', games),
+    path('cart/', cart),
     path('class/', index2.as_view())
 ]
